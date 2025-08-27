@@ -13,6 +13,7 @@ import TitleAuth from "../../../components/auth/title/title";
 import InputAuth from "../../../components/auth/input/input";
 import ButtonAuth from "../../../components/auth/button/button";
 import RedirectAuth from "../../../components/auth/redirect/redirect";
+import { router } from "expo-router";
 import axios from "axios";
 
 const SignupPage = () => {
@@ -46,7 +47,8 @@ const SignupPage = () => {
         "https://lereacteur-bootcamp-api.herokuapp.com/api/airbnb/user/sign_up",
         { email, username, description, password }
       );
-      console.log("OK", response.data);
+      console.log("OK ======>", response.data);
+      router.navigate("auth/login/login");
     } catch (error) {
       // console.error(error.response.data.error);
       if (error.response.data.error === "Missing parameter(s)") {

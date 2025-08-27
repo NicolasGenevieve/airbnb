@@ -6,12 +6,14 @@ const styles = StyleSheet.create({
     // borderColor: "purple",
     // borderStyle: "solid",
     flex: 1,
+    backgroundColor: "white",
   },
   keyboardContainer: {
     // borderWidth: 3,
     // borderColor: "green",
     // borderStyle: "solid",
     flex: 1,
+    backgroundColor: "white",
   },
 
   bandeauButton: {

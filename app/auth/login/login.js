@@ -13,6 +13,8 @@ import TitleAuth from "../../../components/auth/title/title";
 import InputAuth from "../../../components/auth/input/input";
 import ButtonAuth from "../../../components/auth/button/button";
 import RedirectAuth from "../../../components/auth/redirect/redirect";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { router } from "expo-router";
 import axios from "axios";
 
 const LoginPage = () => {
@@ -33,7 +35,10 @@ const LoginPage = () => {
         "https://lereacteur-bootcamp-api.herokuapp.com/api/airbnb/user/log_in",
         { email, password }
       );
-      console.log("OK", response);
+      //console.log("OK ========>", response);
+      await AsyncStorage.setItem("userId", response.data.id);
+      await AsyncStorage.setItem("userToken", response.data.token);
+      router.replace("/main/home");
     } catch (error) {
       //console.error(error.response.data.error);
       if (error.response.data.error === "Missing parameter(s)") {
