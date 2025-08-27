@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     // borderStyle: "solid",
     flex: 0.34,
     alignItems: "center",
-    justifyContent: "flex-start",
+    justifyContent: "center",
     paddingTop: 30,
     gap: 15,
   },
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     // borderStyle: "solid",
     flex: 0.34,
     alignItems: "center",
-    justifyContent: "flex-end",
+    justifyContent: "center",
     paddingBottom: 30,
     gap: 30,
   },
@@ -42,6 +42,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     gap: 30,
+  },
+  eye: {
+    position: "absolute",
+    top: "75%",
+    right: "10%",
   },
 });
 

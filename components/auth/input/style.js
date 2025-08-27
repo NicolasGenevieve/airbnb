@@ -9,6 +9,15 @@ const style = StyleSheet.create({
     borderBottomColor: "#EB5A62",
     borderBottomWidth: 2,
     fontSize: 20,
+    padding: 5,
+  },
+  inputAuthLarge: {
+    height: 75,
+    borderColor: "#EB5A62",
+    borderWidth: 2,
+    fontSize: 20,
+    textAlignVertical: "top",
+    padding: 5,
   },
 });
 

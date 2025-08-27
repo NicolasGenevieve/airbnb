@@ -1,12 +1,16 @@
 import style from "./style";
-import { Pressable, Text, View } from "react-native";
+import { Pressable, Text, View, TouchableOpacity } from "react-native";
 
-const ButtonAuth = ({ text, click }) => {
+const ButtonAuth = ({ text, click, disabled }) => {
   return (
     <View style={style.buttonWrap}>
-      <Pressable style={style.button} onPress={click}>
+      <TouchableOpacity
+        style={style.button}
+        onPress={click}
+        disabled={disabled}
+      >
         <Text style={style.buttonText}>{text}</Text>
-      </Pressable>
+      </TouchableOpacity>
     </View>
   );
 };

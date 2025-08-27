@@ -1,15 +1,24 @@
 import { View, TextInput } from "react-native";
 import style from "./style";
 
-const InputAuth = ({ placeholder, keyboardType, secure }) => {
+const InputAuth = ({
+  placeholder,
+  secure,
+  state,
+  setState,
+  large,
+  multiline,
+}) => {
   return (
     <View style={style.inputWrap}>
       <TextInput
-        style={style.inputAuth}
+        style={large ? style.inputAuthLarge : style.inputAuth}
         placeholder={placeholder}
-        keyboardType={keyboardType}
         secureTextEntry={secure}
         autoCapitalize="none"
+        value={state}
+        onChangeText={setState}
+        multiline={multiline}
       />
     </View>
   );
