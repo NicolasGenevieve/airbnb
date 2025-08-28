@@ -1,5 +1,5 @@
 import { View, Image, useWindowDimensions } from "react-native";
-import icon from "../../assets/img/icon.png";
+import icon from "../../assets/img/logo-airbnb.png";
 
 import { StyleSheet } from "react-native";
 
@@ -23,11 +23,10 @@ const style = StyleSheet.create({
     justifyContent: "center",
     height: "10%",
     backgroundColor: "white",
-    marginBottom: 30,
   },
   img: {
     height: 50,
-    width: 50,
+    width: 150,
     backgroundColor: "white",
   },
 });
