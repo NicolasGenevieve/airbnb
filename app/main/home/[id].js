@@ -22,7 +22,7 @@ import MapView, {
 
 export default function RoomPage() {
   const { id } = useLocalSearchParams();
-  console.log(id);
+  console.log("Room id ===>", id);
 
   const [roomData, setRoomData] = useState({});
   const [isLoading, setIsLoading] = useState(true);

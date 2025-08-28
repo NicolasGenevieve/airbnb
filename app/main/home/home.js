@@ -54,10 +54,7 @@ export default function HomePage() {
                 <Pressable
                   style={styles.card}
                   onPress={() => {
-                    router.navigate({
-                      pathname: "/main/home/room",
-                      params: { id: item._id },
-                    });
+                    router.push(`/main/home/${item._id}`);
                   }}
                 >
                   <View style={styles.picWrap}>
