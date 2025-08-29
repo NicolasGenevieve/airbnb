@@ -1,4 +1,7 @@
 import { StyleSheet } from "react-native";
+import { Dimensions } from "react-native";
+
+const screenHeight = Dimensions.get("window").height;
 
 const styles = StyleSheet.create({
   keyboard: {
@@ -14,6 +17,7 @@ const styles = StyleSheet.create({
     // borderStyle: "solid",
     flex: 1,
     backgroundColor: "white",
+    flexGrow: 1,
   },
 
   bandeauButton: {
@@ -23,17 +27,17 @@ const styles = StyleSheet.create({
     flex: 0.34,
     alignItems: "center",
     justifyContent: "center",
-    paddingTop: 30,
+    paddingTop: 10,
     gap: 15,
   },
   bandeauBrand: {
     // borderWidth: 3,
     // borderColor: "pink",
     // borderStyle: "solid",
-    flex: 0.34,
+    height: screenHeight * 0.2,
     alignItems: "center",
     justifyContent: "center",
-    paddingBottom: 30,
+    paddingBottom: 0,
     gap: 30,
   },
   bandeauInput: {
@@ -47,7 +51,7 @@ const styles = StyleSheet.create({
   },
   eye: {
     position: "absolute",
-    top: "75%",
+    top: "67%",
     right: "10%",
   },
 });

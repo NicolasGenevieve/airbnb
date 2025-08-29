@@ -8,7 +8,7 @@ import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view
 import { useState } from "react";
 import styles from "./style";
 import AntDesign from "@expo/vector-icons/AntDesign";
-import LogoAuth from "../../../components/auth/logo/logo";
+import LogoLogin from "../../../components/auth/logo/logoLogin";
 import TitleAuth from "../../../components/auth/title/title";
 import InputAuth from "../../../components/auth/input/input";
 import ButtonAuth from "../../../components/auth/button/button";
@@ -35,7 +35,8 @@ const LoginPage = () => {
         "https://lereacteur-bootcamp-api.herokuapp.com/api/airbnb/user/log_in",
         { email, password }
       );
-      //console.log("OK ========>", response);
+      console.log("ID ========>", response.data.id);
+      console.log("TOKEN ======>", response.data.token);
       await AsyncStorage.setItem("userId", response.data.id);
       await AsyncStorage.setItem("userToken", response.data.token);
       router.replace("/main/home");
@@ -59,7 +60,7 @@ const LoginPage = () => {
       contentContainerStyle={styles.keyboardContainer}
     >
       <View style={[styles.bandeauBrand, { width }]}>
-        <LogoAuth />
+        <LogoLogin />
         <TitleAuth title="Sign In" />
       </View>
       <View style={[styles.bandeauInput, { width }]}>

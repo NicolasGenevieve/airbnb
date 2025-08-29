@@ -73,6 +73,10 @@ const SignupPage = () => {
     <KeyboardAwareScrollView
       style={styles.keyboard}
       contentContainerStyle={styles.keyboardContainer}
+      contentContainerStyle={{ flexGrow: 1 }}
+      enableOnAndroid={true}
+      extraScrollHeight={80}
+      keyboardShouldPersistTaps="handled"
     >
       <View style={[styles.bandeauBrand, { width }]}>
         <LogoAuth />

@@ -7,7 +7,7 @@ const style = StyleSheet.create({
     // borderStyle: "solid",
     paddingHorizontal: 20,
     alignItems: "center",
-    height: "50%",
+    height: "45%",
   },
   img: {
     height: "100%",

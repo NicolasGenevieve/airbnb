@@ -7,7 +7,7 @@ import {
   Pressable,
 } from "react-native";
 import LottieView from "lottie-react-native";
-import { Link, router } from "expo-router";
+import { router } from "expo-router";
 import { useEffect, useState } from "react";
 import HomeLoading from "../../../assets/img/HomeLoading.json";
 import LogoHome from "../../../components/home/logo";

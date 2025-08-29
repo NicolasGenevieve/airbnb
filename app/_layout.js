@@ -12,7 +12,6 @@ const RootLayout = () => {
       console.log(userToken);
 
       if (userId !== null && userToken !== null) {
-        // redirection vers home
         router.replace("/main/home");
       } else {
         router.replace("auth/login/login");
